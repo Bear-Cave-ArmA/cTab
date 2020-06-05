@@ -31,12 +31,8 @@ publicVariable "cTab_helmetClass_has_HCam_server";
 cTab_userMarkerLists = [];
 cTab_userMarkerTransactionId = -1;
 
-[] spawn {
-	waituntil {time > 0};
-	sleep .1;
-	
-	while {true} do {
+[{
+	[{
 		["cTab_updatePulse"] call CBA_fnc_globalEvent;
-		sleep 30;
-	};
-};
+	}, 30] call CBA_fnc_addPerFrameHandler;
+}] call CBA_fnc_execNextFrame;

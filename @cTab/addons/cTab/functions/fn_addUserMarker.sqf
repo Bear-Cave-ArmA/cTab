@@ -1,25 +1,25 @@
 /*
 	Name: cTab_fnc_addUserMarker
-	
+
 	Author(s):
 		Gundy
-	
+
 	Description:
 		Add a new user marker to the list and broadcast it. This function is called on the server.
-	
+
 	Parameters:
 		0: STRING  - Encryption Key for this marker
 		1: ARRAY   - markerData
 	Optional:
 		2: INTEGER - Transaction ID
-	
+
 	Returns:
 		BOOLEAN - Always TRUE
-	
+
 	Example:
 		// Client requesting marker addition and server receiving request
 		["bluefor",[[1714.35,5716.82],0,0,0,"12:00",player]]call cTab_fnc_addUserMarker;
-		
+
 		// Client receiving marker addition (from server)
 		["bluefor",[21,[[1714.35,5716.82],0,0,0,"12:00",player]],157]call cTab_fnc_addUserMarker;
 */
@@ -37,13 +37,13 @@ call {
 			// Increase transaction ID
 			cTab_userMarkerTransactionId = cTab_userMarkerTransactionId + 1;
 			_transactionId = cTab_userMarkerTransactionId;
-			
+
 			// Add marker data to list
 			[cTab_userMarkerLists,_encryptionKey,[[_transactionId,_markerData]]] call cTab_fnc_addToPairs;
-			
+
 			// Send addUserMarker command to all clients
 			[[_encryptionKey,[_transactionId,_markerData],_transactionId],"cTab_fnc_addUserMarker",true,false,true] call bis_fnc_MP;
-			
+
 			// If this was run on a client-server (i.e. in single player or locally hosted), update the marker list
 			if (hasInterface && {_encryptionKey == call cTab_fnc_getPlayerEncryptionKey}) then {
 				call cTab_fnc_updateUserMarkerList;
@@ -70,7 +70,7 @@ call {
 			// only update the user marker list if the marker was added to the player's side
 			if (_encryptionKey == call cTab_fnc_getPlayerEncryptionKey) then {
 				call cTab_fnc_updateUserMarkerList;
-				
+
 				// add notification if marker was issued by someone else
 				if ((_markerData select 1 select 5) != cTab_player) then {
 					["BFT",format ["New marker at #%1",mapGridPosition (_markerData select 1 select 0)],20] call cTab_fnc_addNotification;

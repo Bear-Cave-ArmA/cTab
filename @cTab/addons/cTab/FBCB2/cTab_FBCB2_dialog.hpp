@@ -28,7 +28,7 @@ class cTab_FBCB2_dlg {
 			y = pxToScreen_Y(cTab_GUI_FBCB2_SCREEN_CONTENT_Y);
 			w = pxToScreen_W(cTab_GUI_FBCB2_SCREEN_CONTENT_W);
 			h = pxToScreen_H(cTab_GUI_FBCB2_SCREEN_CONTENT_H);
-			onDraw = "nop = _this call cTabOnDrawbftVeh;";
+			onDraw = "nop = _this call cTab_OnDraw_fnc_bftVeh;";
 			onMouseButtonDblClick = "_ok = [3300,_this] execVM '\cTab\shared\cTab_markerMenu_load.sqf';";
 			onMouseMoving = "cTabCursorOnMap = _this select 3;cTabMapCursorPos = _this select 0 ctrlMapScreenToWorld [_this select 1,_this select 2];";
 			maxSatelliteAlpha = 10000;

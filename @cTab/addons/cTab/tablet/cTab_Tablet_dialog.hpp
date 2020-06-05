@@ -57,18 +57,18 @@ class cTab_Tablet_dlg {
 			y = pxToScreen_Y(cTab_GUI_tablet_WINDOW_CONTENT_B_Y);
 			w = pxToScreen_W(cTab_GUI_tablet_WINDOW_CONTENT_W);
 			h = pxToScreen_H(cTab_GUI_tablet_WINDOW_CONTENT_H);
-			onDraw = "nop = _this call cTabOnDrawUAV;";
+			onDraw = "nop = _this call cTab_OnDraw_fnc_UAV;";
 			onMouseButtonDblClick = "";
 		};
 		class cTabHcamMap: cTabUavMap
 		{
 			idc = IDC_CTAB_CTABHCAMMAP;
-			onDraw = "nop = _this call cTabOnDrawHCam;";
+			onDraw = "nop = _this call cTab_OnDraw_fnc_HCam;";
 		};
 		class screen: cTab_Tablet_RscMapControl
 		{
 			idc = IDC_CTAB_SCREEN;
-			onDraw = "nop = _this call cTabOnDrawbft;";
+			onDraw = "nop = _this call cTab_OnDraw_fnc_bft;";
 			onMouseButtonDblClick = "_ok = [3300,_this] execVM '\cTab\shared\cTab_markerMenu_load.sqf';";
 			onMouseMoving = "cTabCursorOnMap = _this select 3;cTabMapCursorPos = _this select 0 ctrlMapScreenToWorld [_this select 1,_this select 2];";
 		};
@@ -277,7 +277,7 @@ class cTab_Tablet_dlg {
 					y = pxToGroup_Y(cTab_GUI_tablet_MESSAGE_MESSAGELIST_Y);
 					w = pxToScreen_W(cTab_GUI_tablet_MESSAGE_MESSAGELIST_W);
 					h = pxToScreen_H(cTab_GUI_tablet_MESSAGE_MESSAGELIST_H);
-					onLBSelChanged = "_this call cTab_msg_get_mailTxt;";
+					onLBSelChanged = "_this call cTab_msg_fnc_get_mailTxt;";
 				};
 				class msgTxt: cTab_RscEdit_Tablet
 				{
@@ -329,7 +329,7 @@ class cTab_Tablet_dlg {
 					y = pxToGroup_Y(cTab_GUI_tablet_MESSAGE_BUTTON_SEND_Y);
 					w = pxToScreen_W(cTab_GUI_tablet_MESSAGE_BUTTON_W);
 					h = pxToScreen_H(cTab_GUI_tablet_MESSAGE_BUTTON_H);
-					action = "call cTab_msg_Send;";
+					action = "call cTab_msg_fnc_Send;";
 				};
 				class edittxtbox: cTab_RscEdit_Tablet
 				{
@@ -455,7 +455,7 @@ class cTab_Tablet_dlg {
 		class btnACT: cTab_Tablet_btnMouse
 		{
 			idc = IDC_CTAB_BTNACT;
-			action = "_null = [] call cTab_Tablet_btnACT;";
+			action = "_null = [] call cTab_fnc_btnACT;";
 			tooltip = "";
 		};
 	};

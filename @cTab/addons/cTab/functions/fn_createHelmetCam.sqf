@@ -1,31 +1,28 @@
 /*
  	Name: cTab_fnc_createHelmetCam
- 	
+
  	Author(s):
 		Gundy, Riouken
 
  	Description:
 		Set up helmet camera and display on supplied render target
-	
+
 	Parameters:
 		0: STRING - Render target
 		1: STRING - Name of unit with helmet camera (format used from `str unitObject`)
- 	
+
  	Returns:
 		BOOLEAN - If helmet cam could be set up or not
- 	
+
  	Example:
 		["rendertarget12",str player] spawn cTab_fnc_createHelmetCam;
 */
 
-private ["_renderTarget","_data","_newHost","_camOffSet","_targetOffSet","_oldCam","_oldHost","_nop","_target","_cam"];
+params ["_renderTarget","_data"];
 
-_renderTarget = _this select 0;
-_data = _this select 1;
-
-_newHost = objNull;
-_camOffSet = [];
-_targetOffSet = [];
+private _newHost = objNull;
+private _camOffSet = [];
+private _targetOffSet = [];
 
 // see if given unit name is still in the list of units with valid helmet cams
 {
@@ -58,12 +55,12 @@ if (IsNull _newHost) exitWith {
 // if there is already a camera, see if its the same one we are about to set up
 // if true, render to given target (in case the target has changed), else delete the camera so we can create a new one
 if (!isNil "cTabHcams") then {
-	_oldCam = cTabHcams select 0;
-	_oldHost = cTabHcams select 2;
+	private _oldCam = cTabHcams select 0;
+	private _oldHost = cTabHcams select 2;
 	if (_oldHost isEqualTo _newHost) then {
 		_oldCam cameraEffect ["INTERNAL","BACK",_renderTarget];
 	} else {
-		_nop = [] call cTab_fnc_deleteHelmetCam;
+		private _nop = [] call cTab_fnc_deleteHelmetCam;
 		waitUntil {_nop};
 	};
 };
@@ -71,11 +68,11 @@ if (!isNil "cTabHcams") then {
 // only continue if there is no helmet cam currently set up
 if (!isNil "cTabHcams") exitWith {true};
 
-_target = "Sign_Sphere10cm_F" createVehicleLocal position player;
+private _target = "Sign_Sphere10cm_F" createVehicleLocal position player;
 hideObject _target;
 _target attachTo [_newHost,_targetOffSet];
 
-_cam = "camera" camCreate getPosATL _newHost;
+private _cam = "camera" camCreate getPosATL _newHost;
 _cam camPrepareFov 0.700;
 _cam camPrepareTarget _target;
 _cam camCommitPrepared 0;

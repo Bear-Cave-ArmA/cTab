@@ -24,7 +24,7 @@ class cTab_microDAGR_dlg
 	{
 		class screen: cTab_microDAGR_RscMapControl
 		{
-			onDraw = "nop = _this call cTabOnDrawbftmicroDAGRdlg;";
+			onDraw = "nop = _this call cTab_OnDraw_fnc_bftMicroDAGRdlg;";
 			onMouseMoving = "cTabMapCursorPos = _this select 0 ctrlMapScreenToWorld [_this select 1,_this select 2];";
 			// set initial map scale
 			scaleDefault = "(missionNamespace getVariable 'cTabMapScale') * 0.86 / (safezoneH * 0.8)";

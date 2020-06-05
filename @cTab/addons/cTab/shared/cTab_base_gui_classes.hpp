@@ -1855,7 +1855,6 @@ class cTab_RscMapControl
 		coefMax = 4;
 		color[] = {0,0,0,1};
 	};
-
 	class ActiveMarker
 	{
 		//icon = "\A3\ui_f\data\map\mapcontrol\custommark_ca.paa";
@@ -1865,9 +1864,13 @@ class cTab_RscMapControl
 		coefMax = 1;
 		color[] = {0,0,0,1};
 	};
-
-
-
+	class LineMarker
+	{
+		lineWidthThin = 0.008;
+		lineWidthThick = 0.014;
+		lineDistanceMin = 3e-005;
+		lineLengthMin = 5;
+	};
 };
 
 class cTab_MenuItem: cTab_ActiveText

@@ -276,14 +276,14 @@ if (isNil "_mode") then {
 					// ---------- MESSAGING -----------
 					if (_mode == "MESSAGE") exitWith {
 						_displayItemsToShow = [IDC_CTAB_GROUP_MESSAGE];
-						call cTab_msg_gui_load;
+						call cTab_msg_fnc_gui_load;
 						cTabRscLayerMailNotification cutText ["", "PLAIN"];
 						_btnActCtrl ctrlSetTooltip "";
 					};
 					// ---------- MESSAGING COMPOSE -----------
 					if (_mode == "COMPOSE") exitWith {
 						_displayItemsToShow pushBack IDC_CTAB_GROUP_COMPOSE;
-						call cTab_msg_gui_load;
+						call cTab_msg_fnc_gui_load;
 					};
 					// ---------- FULLSCREEN HELMET CAM -----------
 					if (_mode == "HCAM_FULL") exitWith {

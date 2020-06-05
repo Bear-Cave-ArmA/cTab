@@ -26,7 +26,7 @@ class cTab_TAD_dsp
 		class screen: cTab_TAD_RscMapControl
 		{
 			idc = IDC_CTAB_SCREEN;
-			onDraw = "nop = _this call cTabOnDrawbftTAD;";
+			onDraw = "nop = _this call cTab_OnDraw_fnc_bftTAD;";
 			// set initial map scale
 			scaleDefault = "missionNamespace getVariable 'cTabMapScale'";
 			// hide grid lines
@@ -41,7 +41,7 @@ class cTab_TAD_dsp
 		class screenBlack: cTab_TAD_RscMapControl_BLACK
 		{
 			idc = IDC_CTAB_SCREEN_BLACK;
-			onDraw = "nop = _this call cTabOnDrawbftTAD;";
+			onDraw = "nop = _this call cTab_OnDraw_fnc_bftTAD;";
 			// set initial map scale
 			scaleDefault = "missionNamespace getVariable 'cTabMapScale'";
 			// hide grid lines

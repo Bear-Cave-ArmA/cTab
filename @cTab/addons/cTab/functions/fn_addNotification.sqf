@@ -18,22 +18,19 @@
  * Public: No
  */
 
-private ["_appID","_notification","_time","_done","_decayTime"];
+params ["_appID","_notification","_decayTime"];
 
-_appID = _this select 0;
-_notification = _this select 1;
-_decayTime = _this select 2;
-_time = [] call cTab_fnc_currentTime;
-_done = false;
+private _time = [] call cTab_fnc_currentTime;
+private _done = false;
 
 // search for other _appID notifications
-{
+cTabNotificationCache apply {
 	// if we find one, override it and increase the counter
 	if ((_x select 0) isEqualTo _appID) exitWith {
 		cTabNotificationCache set [_forEachIndex,[_appID,_time,_notification,_decayTime,(_x select 4) + 1]];
 		_done = true;
 	};
-} forEach cTabNotificationCache;
+};
 
 // if we haven't added the notification to the cache above, do it now
 if !(_done) then {

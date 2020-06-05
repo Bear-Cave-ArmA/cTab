@@ -1,10 +1,8 @@
-class CfgFunctions
-{
-	class cTab
-	{
-		class Functions
-		{
+class CfgFunctions {
+	class cTab {
+		class Functions {
 			file="cTab\functions";
+
 			class addNotification{};
 			class addToPairs{};
 			class addUserMarker{};
@@ -55,6 +53,53 @@ class CfgFunctions
 			class updateInterface{};
 			class updateUserMarkerList{};
 			class userMenuSelect{};
+
+			//New - From player_init.sqf
+			class btnACT{};
+			class decBrightness{};
+			class iconText_toggle{};
+			class incBrightness{};
+			class mapType_toggle{};
+			class mode_toggle{};
+			class onIfMainPressed{};
+			class onIfSecondaryPressed{};
+			class onIfTertiaryPressed{};
+			class onMsgBtnDelete{};
+			class onZoomInPressed{};
+			class onZoomOutPressed{};
+			class showMenu_toggle{};
+			class toggleNightMode{};
+			class txt_size_dec{};
+			class txt_size_inc{};
+		};
+	};
+
+	class cTab_msg {
+		class Functions {
+			file="cTab\functions\msg";
+
+			class send{};
+			class delete_all{};
+			class get_mailTxt{};
+			class gui_load{};
+			class receive{};
+		};
+	};
+
+	class cTab_onDraw {
+		class Functions {
+			file="cTab\functions\onDraw";
+
+			class bft{};
+			class bftAndroid{};
+			class bftAndroidDsp{};
+			class bftMicroDAGRdlg{};
+			class bftmicroDAGRdsp{};
+			class bftTAD{};
+			class bftTADdialog{};
+			class bftVeh{};
+			class HCam{};
+			class UAV{};
 		};
 	};
 };

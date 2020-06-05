@@ -22,13 +22,11 @@
 		[_cam] call cTab_fnc_deleteUAVcam;
 */
 
-private ["_cam","_camToDelete","_i"];
-
-_camToDelete = if (count _this == 1) then {_this select 0} else {objNull};
+params [["_camToDelete",objNull]];
 
 // remove cameras
 for "_i" from (count cTabUAVcams -1) to 0 step -1 do {
-	_cam = cTabUAVcams select _i select 2;
+	private _cam = cTabUAVcams select _i select 2;
 	if (isNull _camToDelete || {_cam == _camToDelete}) then {
 		0 = cTabUAVcams deleteAt _i;
 		_cam cameraEffect ["TERMINATE","BACK"];

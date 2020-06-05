@@ -18,10 +18,9 @@
 
 */
 
-private ["_cam"];
-
 if (!isNil "cTabHcams") then {
-	_cam = cTabHcams select 0;
+	params ["_cam"];
+
 	_cam cameraEffect ["TERMINATE","BACK"];
 	camDestroy _cam;
 	deleteVehicle (cTabHcams select 1);

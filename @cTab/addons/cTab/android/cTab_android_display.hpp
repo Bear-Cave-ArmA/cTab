@@ -28,7 +28,7 @@ class cTab_Android_dsp {
 		class windowsBG: cTab_android_windowsBG {};
 		class screen: cTab_android_RscMapControl
 		{
-			onDraw = "nop = _this call cTabOnDrawbftAndroidDsp;";
+			onDraw = "nop = _this call cTab_OnDraw_fnc_bftAndroidDsp;";
 		};
 		class screenTopo: screen
 		{

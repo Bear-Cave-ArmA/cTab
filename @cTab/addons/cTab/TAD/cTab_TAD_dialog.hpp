@@ -24,7 +24,7 @@ class cTab_TAD_dlg
 		class screen: cTab_TAD_RscMapControl
 		{
 			idc = IDC_CTAB_SCREEN;
-			onDraw = "nop = _this call cTabOnDrawbftTADdialog;";
+			onDraw = "nop = _this call cTab_OnDraw_fnc_bftTADdialog;";
 			onMouseButtonDblClick = "_ok = [3300,_this] execVM '\cTab\shared\cTab_markerMenu_load.sqf';";
 			onMouseMoving = "cTabCursorOnMap = _this select 3;cTabMapCursorPos = _this select 0 ctrlMapScreenToWorld [_this select 1,_this select 2];";
 		};
@@ -36,7 +36,7 @@ class cTab_TAD_dlg
 		class screenBlack: cTab_TAD_RscMapControl_BLACK
 		{
 			idc = IDC_CTAB_SCREEN_BLACK;
-			onDraw = "nop = _this call cTabOnDrawbftTADdialog;";
+			onDraw = "nop = _this call cTab_OnDraw_fnc_bftTADdialog;";
 			onMouseButtonDblClick = "_ok = [3300,_this] execVM '\cTab\shared\cTab_markerMenu_load.sqf';";
 			onMouseMoving = "cTabCursorOnMap = _this select 3;cTabMapCursorPos = _this select 0 ctrlMapScreenToWorld [_this select 1,_this select 2];";
 		};

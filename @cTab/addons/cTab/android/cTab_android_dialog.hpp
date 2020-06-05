@@ -28,7 +28,7 @@ class cTab_Android_dlg {
 		class windowsBG: cTab_android_windowsBG {};
 		class screen: cTab_android_RscMapControl
 		{
-			onDraw = "nop = _this call cTabOnDrawbftAndroid;";
+			onDraw = "nop = _this call cTab_OnDraw_fnc_bftAndroid;";
 			onMouseButtonDblClick = "_ok = [3300,_this] execVM '\cTab\shared\cTab_markerMenu_load.sqf';";
 			onMouseMoving = "cTabCursorOnMap = _this select 3;cTabMapCursorPos = _this select 0 ctrlMapScreenToWorld [_this select 1,_this select 2];";
 		};
@@ -154,7 +154,7 @@ class cTab_Android_dlg {
 					y = pxToGroup_Y(cTab_GUI_android_MESSAGE_MESSAGELIST_Y);
 					w = pxToScreen_W(cTab_GUI_android_MESSAGE_MESSAGELIST_W);
 					h = pxToScreen_H(cTab_GUI_android_MESSAGE_MESSAGELIST_H);
-					onLBSelChanged = "_this call cTab_msg_get_mailTxt;";
+					onLBSelChanged = "_this call cTab_msg_fnc_get_mailTxt;";
 				};
 				class msgframe: cTab_RscFrame
 				{
@@ -243,7 +243,7 @@ class cTab_Android_dlg {
 					y = pxToGroup_Y(cTab_GUI_android_MESSAGE_BUTTON_SEND_Y);
 					w = pxToScreen_W(cTab_GUI_android_MESSAGE_BUTTON_W);
 					h = pxToScreen_H(cTab_GUI_android_MESSAGE_BUTTON_H);
-					action = "call cTab_msg_Send;";
+					action = "call cTab_msg_fnc_Send;";
 				};
 				class edittxtbox: cTab_RscEdit
 				{

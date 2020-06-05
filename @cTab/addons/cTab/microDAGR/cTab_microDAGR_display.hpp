@@ -24,7 +24,7 @@ class cTab_microDAGR_dsp
 	{
 		class screen: cTab_microDAGR_RscMapControl
 		{
-			onDraw = "nop = _this call cTabOnDrawbftmicroDAGRdsp;";
+			onDraw = "nop = _this call cTab_OnDraw_fnc_bftmicroDAGRdsp;";
 			// set initial map scale
 			scaleDefault = "missionNamespace getVariable 'cTabMapScale'";
 		};

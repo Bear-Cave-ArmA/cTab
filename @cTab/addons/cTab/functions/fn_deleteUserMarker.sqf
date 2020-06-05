@@ -24,12 +24,9 @@
 		["bluefor",5,158] call cTab_fnc_deleteUserMarker;
 */
 
-private ["_encryptionKey","_markerIndex","_transactionId","_userMarkerList","_removeIndex"];
+private ["_userMarkerList","_removeIndex"];
 
-_encryptionKey = _this select 0;
-_markerIndex = _this select 1;
-_transactionId = _this select 2; // not set when initiated from client
-
+params ["_encryptionKey","_markerIndex","_transactionId"];
 call {
 	// If received on the server
 	if (isServer) exitWith {

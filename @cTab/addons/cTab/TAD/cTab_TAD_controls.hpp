@@ -875,3 +875,8 @@ class cTab_TAD_notification: cTab_RscText_TAD {
 	colorText[] = COLOR_NAVYBLUE;
 	colorBackground[] = COLOR_WHITE;
 };
+
+#undef pxToScreen_X(PIXEL)
+#undef pxToScreen_Y(PIXEL)
+#undef pxToScreen_W(PIXEL)
+#undef pxToScreen_H(PIXEL)

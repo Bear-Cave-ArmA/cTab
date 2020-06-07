@@ -365,3 +365,6 @@ class cTab_android_notification: cTab_RscText_Android {
 	w = pxToScreen_W(cTab_GUI_android_SCREEN_CONTENT_W * 0.8);
 	colorBackground[] = COLOR_BLACK;
 };
+
+#undef pxToGroup_X(PIXEL)
+#undef pxToGroup_Y(PIXEL)

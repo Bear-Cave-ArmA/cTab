@@ -333,3 +333,8 @@ class cTab_microDAGR_brightness: cTab_RscText_microDAGR
 	h = pxToScreen_H(cTab_GUI_microDAGR_MAP_H);
 	colorBackground[] = COLOR_TRANSPARENT;
 };
+
+#undef pxToScreen_X(PIXEL)
+#undef pxToScreen_Y(PIXEL)
+#undef pxToScreen_W(PIXEL)
+#undef pxToScreen_H(PIXEL)

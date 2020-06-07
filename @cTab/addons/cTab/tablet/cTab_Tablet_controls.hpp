@@ -441,3 +441,11 @@ class cTab_Tablet_notification: cTab_RscText_Tablet {
     w = pxToScreen_W(cTab_GUI_tablet_SCREEN_CONTENT_W * 0.5);
     colorBackground[] = COLOR_BLACK;
 };
+
+#undef pxToScreen_X(PIXEL)
+#undef pxToScreen_Y(PIXEL)
+#undef pxToScreen_W(PIXEL) 
+#undef pxToScreen_H(PIXEL)
+
+#undef pxToGroup_X(PIXEL)
+#undef pxToGroup_Y(PIXEL)

@@ -64,3 +64,12 @@ class cTab_Android_dsp {
 		class background: cTab_android_background {};
 	};
 };
+
+#undef GUI_GRID_W
+#undef GUI_GRID_H
+#undef GUI_GRID_X
+#undef GUI_GRID_Y
+
+#undef cTab_android_DLGtoDSP_fctr
+
+#undef MENU_sizeEx

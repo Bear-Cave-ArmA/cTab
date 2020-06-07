@@ -122,7 +122,7 @@
 ///////////////////////////////////////////////////////////////////////////
 class cTab_RscText
 {
-	access = 0;
+	
 	type = 0;
 	idc = -1;
 	colorBackground[] =
@@ -160,7 +160,7 @@ class cTab_RscText
 };
 class cTab_RscStructuredText
 {
-	access = 0;
+	
 	type = 13;
 	idc = -1;
 	style = 0;
@@ -188,7 +188,7 @@ class cTab_RscStructuredText
 };
 class cTab_RscPicture
 {
-	access = 0;
+	
 	type = 0;
 	idc = -1;
 	style = 48;
@@ -219,7 +219,7 @@ class cTab_RscPicture
 };
 class cTab_RscEdit
 {
-	access = 0;
+	
 	type = 2;
 	x = 0;
 	y = 0;
@@ -264,7 +264,7 @@ class cTab_RscEdit
 };
 class cTab_RscCombo
 {
-	access = 0;
+	
 	type = 4;
 	colorSelect[] =
 	{
@@ -384,7 +384,7 @@ class cTab_RscCombo
 };
 class cTab_RscListBox
 {
-	access = 0;
+	
 	type = 5;
 	w = 0.4;
 	h = 0.4;
@@ -543,7 +543,7 @@ class cTab_RscListBox
 };
 class cTab_RscButton
 {
-	access = 0;
+	
 	type = 1;
 	text = "";
 	colorText[] =
@@ -625,7 +625,7 @@ class cTab_RscButton
 
 class cTab_ActiveText
 {
-	access = 0;
+	
 	type = CT_ACTIVETEXT;
 	style = ST_LEFT;
 	text = "";
@@ -727,7 +727,7 @@ class cTab_ActiveText
 
 class cTab_HTML
 {
-	access = 0; // Control access (0 - ReadAndWrite, 1 - ReadAndCreate, 2 - ReadOnly, 3 - ReadOnlyVerified)
+	 // Control access (0 - ReadAndWrite, 1 - ReadAndCreate, 2 - ReadOnly, 3 - ReadOnlyVerified)
 	style = ST_LEFT; // Style
 	default = 0; // Control selected by default (only one within a display can be used)
 	blinkingPeriod = 0; // Time in which control will fade out and back in. Use 0 to disable the effect.
@@ -792,7 +792,7 @@ class cTab_HTML
 
 class cTab_RscButtonInv
 {
-	access = 0;
+	
 	type = 1;
 	text = "";
 	colorText[] =
@@ -1110,7 +1110,7 @@ class cTab_RscFrame
 };
 class cTab_RscSlider
 {
-	access = 0;
+	
 	type = 3;
 	style = 1024;
 	w = 0.3;
@@ -1472,7 +1472,7 @@ class cTab_RscFrame
 /*
 class cTab_RscSlider
 {
-	access = 0;
+	
 	type = 3;
 	style = 1024;
 	w = 0.3;
@@ -1485,7 +1485,7 @@ class cTab_RscSlider
 
 class cTab_RscMapControl
 {
-  access = 0;
+  
   idc = -1;
   type = CT_MAP_MAIN;
   style = ST_PICTURE;

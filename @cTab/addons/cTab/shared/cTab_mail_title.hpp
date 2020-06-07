@@ -35,3 +35,8 @@ class cTab_Mail_ico_disp {
 		};
 	};
 };
+
+#undef GUI_GRID_X
+#undef GUI_GRID_Y
+#undef GUI_GRID_W
+#undef GUI_GRID_H

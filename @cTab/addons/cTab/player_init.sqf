@@ -73,7 +73,7 @@ cTab_player = objNull;
 		// remove msg notification
 		cTabRscLayerMailNotification cutText ["", "PLAIN"];
 	};
-}, 0, ["some","params",1,2,3]] call CBA_fnc_addPerFrameHandler;
+}, 0] call CBA_fnc_addPerFrameHandler;
 
 /*
 Figure out the scaling factor based on the current map (island) being played

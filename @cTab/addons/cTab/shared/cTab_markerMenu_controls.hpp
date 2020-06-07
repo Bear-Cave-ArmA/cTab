@@ -79,6 +79,8 @@ class MainSubmenu: cTab_RscControlsGroup
 			action = "[0] call cTab_fnc_userMenuSelect;";
 		};
 	};
+	
+	#undef cTab_MENU_MAX_ELEMENTS
 };
 
 class EnemySub1: cTab_RscControlsGroup
@@ -191,6 +193,8 @@ class EnemySub1: cTab_RscControlsGroup
 			action = "[0] call cTab_fnc_userMenuSelect;";
 		};
 	};
+	
+	#undef cTab_MENU_MAX_ELEMENTS
 };
 
 class EnemySub2: cTab_RscControlsGroup
@@ -278,6 +282,8 @@ class EnemySub2: cTab_RscControlsGroup
 			action = "[0] call cTab_fnc_userMenuSelect;";
 		};
 	};
+	
+	#undef cTab_MENU_MAX_ELEMENTS
 };
 
 class EnemySub3: cTab_RscControlsGroup
@@ -408,6 +414,8 @@ class EnemySub3: cTab_RscControlsGroup
 			action = "[0] call cTab_fnc_userMenuSelect;";
 		};
 	};
+	
+	#undef cTab_MENU_MAX_ELEMENTS
 };
 
 class EnemySub4: cTab_RscControlsGroup
@@ -517,6 +525,8 @@ class EnemySub4: cTab_RscControlsGroup
 			action = "[0] call cTab_fnc_userMenuSelect;";
 		};
 	};
+	
+	#undef cTab_MENU_MAX_ELEMENTS
 };
 
 class CasulSub1: cTab_RscControlsGroup
@@ -597,6 +607,8 @@ class CasulSub1: cTab_RscControlsGroup
 			action = "[0] call cTab_fnc_userMenuSelect;";
 		};
 	};
+	
+	#undef cTab_MENU_MAX_ELEMENTS
 };
 
 class GenSub1: cTab_RscControlsGroup
@@ -653,4 +665,6 @@ class GenSub1: cTab_RscControlsGroup
 			action = "[0] call cTab_fnc_userMenuSelect;";
 		};
 	};
+	
+	#undef cTab_MENU_MAX_ELEMENTS
 };

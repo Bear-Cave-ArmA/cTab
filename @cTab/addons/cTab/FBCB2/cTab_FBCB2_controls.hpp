@@ -300,3 +300,11 @@ class cTab_FBCB2_notification: cTab_RscText_FBCB2 {
 	w = pxToScreen_W(cTab_GUI_FBCB2_SCREEN_CONTENT_W * 0.8);
 	colorBackground[] = COLOR_BLACK;
 };
+
+#undef pxToScreen_X(PIXEL)
+#undef pxToScreen_Y(PIXEL)
+#undef pxToScreen_W(PIXEL) 
+#undef pxToScreen_H(PIXEL)
+
+#undef pxToGroup_X(PIXEL)
+#undef pxToGroup_Y(PIXEL)

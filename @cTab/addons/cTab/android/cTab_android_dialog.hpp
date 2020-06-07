@@ -314,3 +314,12 @@ class cTab_Android_dlg {
 		};
 	};
 };
+
+#undef GUI_GRID_W
+#undef GUI_GRID_H
+#undef GUI_GRID_X
+#undef GUI_GRID_Y
+
+#undef cTab_android_DLGtoDSP_fctr
+
+#undef MENU_sizeEx

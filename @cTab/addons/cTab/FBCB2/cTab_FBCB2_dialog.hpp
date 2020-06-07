@@ -118,3 +118,10 @@ class cTab_FBCB2_dlg {
 		class loadingtxt: cTab_FBCB2_loadingtxt {};
 	};
 };
+
+#undef GUI_GRID_W
+#undef GUI_GRID_H
+#undef GUI_GRID_X
+#undef GUI_GRID_Y
+
+#undef MENU_sizeEx

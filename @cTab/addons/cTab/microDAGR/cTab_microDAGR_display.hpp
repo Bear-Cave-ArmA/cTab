@@ -61,3 +61,13 @@ class cTab_microDAGR_dsp
 		class background: cTab_microDAGR_background {};
 	};
 };
+
+#undef GUI_MARGIN_X
+#undef GUI_MARGIN_Y
+
+#undef GUI_GRID_W
+#undef GUI_GRID_H
+#undef GUI_GRID_X
+#undef GUI_GRID_Y
+
+#undef cTab_microDAGR_DLGtoDSP_fctr
